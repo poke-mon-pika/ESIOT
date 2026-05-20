@@ -1,0 +1,11 @@
+#define potPin A0
+#define ledPin 9
+void setup(){
+  pinMode(ledPin,OUTPUT);
+}
+void loop(){
+  int potValue = analogRead(potPin);
+  int ledBrightness = map(potValue, 0,1023,0,255);
+  analogWrite(ledPin, ledBrightness);
+  
+}
